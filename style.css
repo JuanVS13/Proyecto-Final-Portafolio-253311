@@ -1,3 +1,27 @@
+/*Algunas variables para el CSS*/
+:root {
+    /*Estas variables son para colores principales*/
+    --color-header: #1d1f1c;
+    --color-nav-text: rgb(246, 134, 134);
+    --color-principal: rgba(249, 143, 129, 0.5);
+
+    /*Estas variables son para textos*/
+    --color-titulos: rgb(255, 167, 74);
+    --color-parrafos: rgba(245, 127, 54, 0.823);
+    --color-proyecto: rgb(241, 150, 107);
+
+    /*Estas variables son para el boton*/
+    --color-boton: #3b3939;
+    --color-boton-hover: #f16969;
+
+    /*Esta variable es para el footer*/
+    --color-footer: rgb(251, 131, 131);
+
+    /*Estas variables son para estilos del texto*/
+    --borde-blanco: 2px solid white;
+    --texto-blanco: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +29,7 @@
 }
 
 header {
-    background-color: #1d1f1c;
+    background-color: var(--color-header);
     height: 12vh;
     display: flex;
     align-items: center;
@@ -34,7 +58,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: rgb(246, 134, 134);
+    color: var(--color-nav-text);
     text-decoration: none;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -83,7 +107,7 @@ section {
 
 .bloque {
     margin-bottom: 120px;
-    background-color: rgba(249, 143, 129, 0.5);
+    background-color: var(--color-principal);
     padding: 20px;
     border-radius: 10px;
     scroll-margin-top: 14vh;
@@ -130,13 +154,13 @@ section {
 }
 
 .proyecto {
-    background-color: rgb(241, 150, 107);
+    background-color: var(--color-proyecto);
     border-radius: 8px;
     overflow: hidden;
     padding: 0;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    border: var(--borde-blanco);
     border-radius: 10px;
 }
 
@@ -173,7 +197,7 @@ section {
     font-weight: bold;
     font-size: 15px;
     color: rgb(255, 255, 255);
-    background-color: #3b3939;
+    background-color: var(--color-boton);
     padding: 10px;
     text-decoration: none;
     border-radius: 0 0 10px;
@@ -181,7 +205,7 @@ section {
 }
 
 .proyecto a:hover{
-    background-color: #f16969;
+    background-color: var(--color-boton-hover);
     transform: scale(1);
 }
 
@@ -221,8 +245,8 @@ footer {
     font-size: 20px;
     text-shadow: 2px 2px 4px rgba(199, 37, 37, 0.766);
     -webkit-text-stroke: 0.3px rgb(251, 251, 251);
-    border-top: 2px solid rgb(255, 255, 255);
-    background-color: rgb(251, 131, 131);
+    border-top: var(--borde-blanco);
+    background-color: var(--color-footer);
 }
 
 @media (max-width: 480px){
